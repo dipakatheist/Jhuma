@@ -28,11 +28,42 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.photo-backdrop {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.photo-backdrop span {
+  min-width: 0;
+  min-height: 0;
+  background-image: var(--photo);
+  background-position: center 38%;
+  background-size: cover;
+  filter: saturate(0.78);
+}
+
+.photo-backdrop::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 225, 237, 0.68), rgba(250, 198, 221, 0.57)),
+    rgba(255, 242, 247, 0.2);
+  content: "";
+}
+
 button {
   font: inherit;
 }
 
 .page {
+  position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -425,6 +456,10 @@ h1 em {
   .page {
     justify-content: flex-start;
     padding: 20px 12px 8px;
+  }
+
+  .photo-backdrop {
+    grid-template-columns: 1fr 1fr;
   }
 
   .invite-card {

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A date-night invitation, made just for Jhuma." />
+    <meta name="theme-color" content="#ffe4ee" />
+    <title>A date-night question for Jhuma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <article class="invite-card" aria-labelledby="invite-title">
+        <p class="overline"><span aria-hidden="true">✿</span> A little note for you</p>
+
+        <div class="heart-art" aria-hidden="true">
+          <span class="heart heart-back">♥</span>
+          <span class="heart heart-front">♥</span>
+          <span class="heart-sparkle sparkle-left">✦</span>
+          <span class="heart-sparkle sparkle-right">✧</span>
+        </div>
+
+        <h1 id="invite-title">Jhuma, will you go on a <em>date night</em> with me?</h1>
+        <p class="message">
+          I’d love to spend an evening together—something delicious, a little
+          adventure, and lots of time to just enjoy being with you.
+        </p>
+
+        <div class="plan-pills" aria-label="Date-night ideas">
+          <span><span aria-hidden="true">♡</span> Dinner</span>
+          <span><span aria-hidden="true">✧</span> A little stroll</span>
+          <span><span aria-hidden="true">♡</span> Dessert</span>
+        </div>
+        <p class="plan-note">You choose the day and what sounds fun. I’ll take care of the rest.</p>
+
+        <section class="reply-area" aria-label="Your reply">
+          <p class="reply-prompt">What do you say?</p>
+          <div class="yes-arena" id="yes-arena">
+            <button class="button button-yes" id="yes-button" type="button">
+              Yes, I’d love to! <span aria-hidden="true">♡</span>
+            </button>
+          </div>
+          <button class="button button-maybe" id="maybe-button" type="button">
+            Maybe another day
+          </button>
+          <p class="playful-hint" id="playful-hint" aria-live="polite" hidden></p>
+          <p class="response" id="response" role="status" aria-live="polite" hidden></p>
+          <p class="no-pressure">Only if you’d like to—no pressure at all. 💌</p>
+        </section>
+
+        <div class="contact-option">
+          <span>Want to tell me directly?</span>
+          <a href="tel:7002763637" aria-label="Call 7002763637">Call</a>
+          <span aria-hidden="true">·</span>
+          <a href="sms:7002763637" aria-label="Text 7002763637">Text 7002763637</a>
+        </div>
+      </article>
+      <footer class="footer">made with a little extra courage <span aria-hidden="true">♥</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

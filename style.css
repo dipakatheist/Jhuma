@@ -1,0 +1,357 @@
+:root {
+  color-scheme: light;
+  --pink: #db4e82;
+  --pink-deep: #bd356b;
+  --pink-pale: #fff2f7;
+  --ink: #4b2a3a;
+  --muted: #907384;
+  --line: #f3dce6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 18% 13%, rgba(255, 255, 255, 0.85), transparent 25rem),
+    linear-gradient(145deg, #ffe5ee, #f8cfe0 56%, #ffedf3);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 38px 20px 16px;
+}
+
+.invite-card {
+  width: min(100%, 610px);
+  padding: clamp(28px, 6vw, 54px) clamp(22px, 7vw, 64px) 30px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  background: rgba(255, 252, 253, 0.94);
+  box-shadow: 0 26px 75px rgba(156, 58, 101, 0.18);
+  text-align: center;
+}
+
+.overline {
+  margin: 0;
+  color: var(--pink-deep);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.overline span {
+  margin-right: 5px;
+  color: #e7a053;
+}
+
+.heart-art {
+  position: relative;
+  width: 142px;
+  height: 116px;
+  margin: 15px auto 10px;
+}
+
+.heart {
+  position: absolute;
+  display: block;
+  line-height: 1;
+  filter: drop-shadow(0 9px 10px rgba(198, 53, 107, 0.18));
+  animation: heartbeat 1.8s ease-in-out infinite;
+}
+
+.heart-back {
+  top: 13px;
+  left: 22px;
+  color: #f4a0bf;
+  font-size: 4rem;
+  transform: rotate(-17deg);
+}
+
+.heart-front {
+  top: 24px;
+  left: 56px;
+  color: var(--pink);
+  font-size: 4.5rem;
+  animation-delay: 140ms;
+}
+
+.heart-sparkle {
+  position: absolute;
+  color: #e7a053;
+}
+
+.sparkle-left {
+  top: 17px;
+  left: 8px;
+  font-size: 1.2rem;
+}
+
+.sparkle-right {
+  top: 0;
+  right: 8px;
+  color: var(--pink);
+  font-size: 1.55rem;
+}
+
+h1 {
+  max-width: 490px;
+  margin: 0 auto;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.2rem, 7vw, 3.55rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.13;
+}
+
+h1 em {
+  color: var(--pink);
+  font-weight: 500;
+}
+
+.message {
+  max-width: 430px;
+  margin: 17px auto 19px;
+  color: #806779;
+  font-size: 0.92rem;
+  line-height: 1.75;
+}
+
+.plan-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.plan-pills span {
+  padding: 8px 12px;
+  border: 1px solid #f3dce6;
+  border-radius: 999px;
+  background: #fff6f9;
+  color: #77556a;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.plan-pills span span {
+  margin-right: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--pink);
+}
+
+.plan-note {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 0.74rem;
+}
+
+.reply-area {
+  margin-top: 24px;
+}
+
+.reply-prompt {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.yes-arena {
+  position: relative;
+  width: min(100%, 410px);
+  height: 78px;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+.button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition:
+    left 180ms ease,
+    top 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(189, 53, 107, 0.28);
+  outline-offset: 3px;
+}
+
+.button-yes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(135deg, #ed679a, #d84079);
+  color: #fff;
+  box-shadow: 0 9px 20px rgba(216, 62, 121, 0.24);
+}
+
+.button-yes:hover {
+  background: linear-gradient(135deg, #e6538b, #c72e69);
+  box-shadow: 0 12px 24px rgba(216, 62, 121, 0.3);
+}
+
+.button-yes span {
+  font-size: 1.05rem;
+}
+
+.button-maybe {
+  border-color: #efd8e2;
+  background: #fff;
+  color: #76596c;
+}
+
+.button-maybe:hover {
+  border-color: #e7a6bd;
+  background: #fff6f9;
+}
+
+.playful-hint,
+.no-pressure {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+}
+
+.response {
+  margin: 12px 0 0;
+  color: var(--pink-deep);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.contact-option {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 21px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.contact-option a {
+  color: var(--pink-deep);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(189, 53, 107, 0.3);
+  text-underline-offset: 3px;
+}
+
+.contact-option a:hover {
+  color: #88264d;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 52px;
+  color: #986e83;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer span {
+  color: var(--pink-deep);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.06;
+  }
+}
+
+@media (max-width: 520px) {
+  .page {
+    justify-content: flex-start;
+    padding: 20px 12px 8px;
+  }
+
+  .invite-card {
+    padding: 27px 19px 24px;
+    border-radius: 23px;
+  }
+
+  .heart-art {
+    margin-top: 12px;
+    transform: scale(0.88);
+  }
+
+  .message {
+    font-size: 0.87rem;
+  }
+
+  .yes-arena {
+    height: 55px;
+  }
+
+  .button-yes {
+    position: static;
+    width: 100%;
+  }
+
+  .button-maybe {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

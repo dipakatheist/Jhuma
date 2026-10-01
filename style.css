@@ -65,53 +65,39 @@ button {
   color: #e7a053;
 }
 
-.heart-art {
-  position: relative;
-  width: 142px;
-  height: 116px;
-  margin: 15px auto 10px;
+.river-art {
+  width: min(100%, 360px);
+  margin: 16px auto 12px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  border-radius: 19px;
+  background: #f8c5dc;
+  box-shadow: 0 12px 30px rgba(156, 58, 101, 0.13);
 }
 
-.heart {
-  position: absolute;
+.river-art svg {
+  width: 100%;
+  height: auto;
   display: block;
-  line-height: 1;
-  filter: drop-shadow(0 9px 10px rgba(198, 53, 107, 0.18));
-  animation: heartbeat 1.8s ease-in-out infinite;
 }
 
-.heart-back {
-  top: 13px;
-  left: 22px;
-  color: #f4a0bf;
-  font-size: 4rem;
-  transform: rotate(-17deg);
+.river-caption {
+  display: block;
+  padding: 7px 10px 8px;
+  background: #fff9fb;
+  color: #8b627a;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.025em;
 }
 
-.heart-front {
-  top: 24px;
-  left: 56px;
-  color: var(--pink);
-  font-size: 4.5rem;
-  animation-delay: 140ms;
-}
-
-.heart-sparkle {
-  position: absolute;
-  color: #e7a053;
-}
-
-.sparkle-left {
-  top: 17px;
-  left: 8px;
-  font-size: 1.2rem;
-}
-
-.sparkle-right {
-  top: 0;
-  right: 8px;
-  color: var(--pink);
-  font-size: 1.55rem;
+.place-tag {
+  margin: 0 0 8px;
+  color: var(--pink-deep);
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -398,6 +384,24 @@ h1 em {
   color: #88264d;
 }
 
+.instagram-link {
+  display: inline-block;
+  margin-top: 11px;
+  color: #876b7b;
+  font-size: 0.66rem;
+  text-decoration: underline;
+  text-decoration-color: rgba(189, 53, 107, 0.24);
+  text-underline-offset: 3px;
+}
+
+.instagram-link:hover {
+  color: var(--pink-deep);
+}
+
+.instagram-link span {
+  color: var(--pink);
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -417,17 +421,6 @@ h1 em {
   display: none !important;
 }
 
-@keyframes heartbeat {
-  0%,
-  100% {
-    scale: 1;
-  }
-
-  50% {
-    scale: 1.06;
-  }
-}
-
 @media (max-width: 520px) {
   .page {
     justify-content: flex-start;
@@ -439,9 +432,9 @@ h1 em {
     border-radius: 23px;
   }
 
-  .heart-art {
-    margin-top: 12px;
-    transform: scale(0.88);
+  .river-art {
+    width: min(100%, 330px);
+    margin-top: 13px;
   }
 
   .message {

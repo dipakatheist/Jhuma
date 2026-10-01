@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A date-night invitation, made just for Jhuma." />
     <meta name="theme-color" content="#ffe4ee" />
-    <title>A date-night question for Jhuma</title>
+    <title>A Guwahati date-night question for Jhuma</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,38 +19,61 @@
       <article class="invite-card" aria-labelledby="invite-title">
         <p class="overline"><span aria-hidden="true">✿</span> A little note for you</p>
 
-        <div class="heart-art" aria-hidden="true">
-          <span class="heart heart-back">♥</span>
-          <span class="heart heart-front">♥</span>
-          <span class="heart-sparkle sparkle-left">✦</span>
-          <span class="heart-sparkle sparkle-right">✧</span>
+        <div class="river-art">
+          <svg viewBox="0 0 360 150" role="img" aria-labelledby="river-title river-description">
+            <title id="river-title">Sunset on the Brahmaputra in Guwahati</title>
+            <desc id="river-description">A pink sunset over the river, distant hills, Umananda island, and a little ferry.</desc>
+            <defs>
+              <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#f8c5dc" />
+                <stop offset="1" stop-color="#fff0df" />
+              </linearGradient>
+              <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#b86591" />
+                <stop offset="1" stop-color="#744b78" />
+              </linearGradient>
+            </defs>
+            <rect width="360" height="150" rx="18" fill="url(#sky)" />
+            <circle cx="265" cy="54" r="28" fill="#fff0c9" />
+            <path d="M0 88 Q46 47 98 77 T198 73 Q248 37 310 77 T410 66 V111 H0Z" fill="#b57b9a" />
+            <path d="M0 100 Q75 82 143 101 T286 95 Q328 88 360 97 V150 H0Z" fill="url(#water)" />
+            <path d="M147 100 Q174 79 205 93 L217 105 H138Z" fill="#6e456d" />
+            <path d="M171 91 L178 82 L185 91 M174 90 V99 M181 90 V99" fill="none" stroke="#fff1df" stroke-width="2" />
+            <path d="M0 121 Q39 115 78 121 T156 121 M208 130 Q252 124 296 130 T370 130" fill="none" stroke="#e6a9c8" stroke-linecap="round" stroke-width="2" opacity=".8" />
+            <path d="M49 108 H105 L97 115 H57Z" fill="#fff4e9" />
+            <path d="M70 100 H88 L95 108 H66Z" fill="#9e527d" />
+            <path d="M78 94 H86 V100 H78Z" fill="#fff4e9" />
+            <path d="M77 119 Q81 116 85 119" fill="none" stroke="#fff0df" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <span class="river-caption">Guwahati, under a soft pink sky</span>
         </div>
 
+        <p class="place-tag"><span aria-hidden="true">⌖</span> Guwahati, Assam</p>
         <h1 id="invite-title">Jhuma, will you go on a <em>date night</em> with me?</h1>
         <p class="message">
-          I’d love to spend an evening together—something delicious, a little
-          adventure, and lots of time to just enjoy being with you.
+          Maybe a sunset by the Brahmaputra, something tasty, and an evening
+          to enjoy being together. We can make it whatever feels lovely to you.
         </p>
 
         <div class="plan-pills" aria-label="Date-night ideas">
-          <span><span aria-hidden="true">♡</span> Dinner</span>
+          <span><span aria-hidden="true">♡</span> Brahmaputra sunset</span>
           <span><span aria-hidden="true">✧</span> A little stroll</span>
-          <span><span aria-hidden="true">♡</span> Dessert</span>
+          <span><span aria-hidden="true">♡</span> Chai &amp; pitha</span>
         </div>
         <section class="date-picker" aria-labelledby="date-picker-title">
           <p class="date-picker-title" id="date-picker-title">Pick the kind of evening you’re in the mood for</p>
           <div class="date-options" role="group" aria-label="Choose a date-night mood">
-            <button class="date-option" type="button" data-vibe="Cozy & quiet" aria-pressed="false">
+            <button class="date-option" type="button" data-vibe="Brahmaputra sunset" aria-pressed="false">
               <span class="option-icon" aria-hidden="true">☾</span>
-              <span><strong>Cozy & quiet</strong><small>Dinner and a slow evening</small></span>
+              <span><strong>River sunset</strong><small>Maybe a ferry and a stroll</small></span>
             </button>
-            <button class="date-option" type="button" data-vibe="Foodie date" aria-pressed="false">
+            <button class="date-option" type="button" data-vibe="Chai and pitha" aria-pressed="false">
               <span class="option-icon" aria-hidden="true">♡</span>
-              <span><strong>Foodie date</strong><small>Find something delicious</small></span>
+              <span><strong>Chai &amp; pitha</strong><small>A cozy local treat</small></span>
             </button>
-            <button class="date-option" type="button" data-vibe="Little adventure" aria-pressed="false">
+            <button class="date-option" type="button" data-vibe="Guwahati food stroll" aria-pressed="false">
               <span class="option-icon" aria-hidden="true">✧</span>
-              <span><strong>Little adventure</strong><small>A stroll and a new place</small></span>
+              <span><strong>Foodie stroll</strong><small>Find a place neither of us knows</small></span>
             </button>
           </div>
           <p class="selection-note" id="selection-note" aria-live="polite" hidden></p>
@@ -87,6 +110,12 @@
           <span aria-hidden="true">·</span>
           <a href="sms:7002763637" aria-label="Text 7002763637">Text 7002763637</a>
         </div>
+        <a
+          class="instagram-link"
+          href="https://www.instagram.com/p/DReg24rEr-X/?img_index=4&amp;stkn=MTdvNzdqaXYyd2JwZg=="
+          target="_blank"
+          rel="noopener noreferrer"
+        >See the Instagram photo you shared <span aria-hidden="true">↗</span></a>
       </article>
       <footer class="footer">made with a little extra courage <span aria-hidden="true">♥</span></footer>
     </main>

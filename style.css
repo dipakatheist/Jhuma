@@ -96,26 +96,72 @@ button {
   color: #e7a053;
 }
 
-.river-art {
+.love-art {
+  position: relative;
   width: min(100%, 360px);
-  margin: 16px auto 12px;
+  height: 150px;
+  display: grid;
+  place-items: center;
+  margin: 14px auto 13px;
   overflow: hidden;
   border: 4px solid #fff;
   border-radius: 19px;
-  background: #f8c5dc;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 255, 255, 0.82), transparent 35%),
+    linear-gradient(135deg, #ffe5ef, #f7c4da);
   box-shadow: 0 12px 30px rgba(156, 58, 101, 0.13);
 }
 
-.river-art svg {
-  width: 100%;
-  height: auto;
-  display: block;
+.love-art-heart {
+  position: absolute;
+  line-height: 1;
+  filter: drop-shadow(0 8px 10px rgba(198, 53, 107, 0.18));
+  animation: heartbeat 2s ease-in-out infinite;
 }
 
-.river-caption {
-  display: block;
-  padding: 7px 10px 8px;
-  background: #fff9fb;
+.heart-shadow {
+  color: #ef9bbc;
+  font-size: 5rem;
+  transform: translate(-22px, 5px) rotate(-17deg);
+}
+
+.heart-main {
+  color: #dc4f85;
+  font-size: 5.7rem;
+  transform: translate(9px, 0) rotate(8deg);
+  animation-delay: 120ms;
+}
+
+.heart-small {
+  color: #f3a8c3;
+  font-size: 2.2rem;
+  transform: translate(43px, 29px) rotate(14deg);
+  animation-delay: 240ms;
+}
+
+.love-art-sparkle {
+  position: absolute;
+  color: #d49352;
+}
+
+.sparkle-one {
+  top: 30px;
+  left: 27%;
+  font-size: 1.1rem;
+}
+
+.sparkle-two {
+  top: 27px;
+  right: 27%;
+  color: var(--pink);
+  font-size: 1.35rem;
+}
+
+.love-art-caption {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  left: 0;
   color: #8b627a;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 0.72rem;
@@ -129,6 +175,83 @@ button {
   font-weight: 700;
   letter-spacing: 0.13em;
   text-transform: uppercase;
+}
+
+.venue-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 13px;
+  border: 1px solid #f0d6e1;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff7fa, #fff0f6);
+  text-align: left;
+}
+
+.venue-pin {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  background: #ffe2ed;
+  color: var(--pink-deep);
+  font-size: 1.2rem;
+}
+
+.venue-details {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+  flex: 1;
+}
+
+.venue-eyebrow {
+  color: var(--muted);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.venue-details strong {
+  color: var(--ink);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.93rem;
+}
+
+.venue-details > span:last-child {
+  color: var(--muted);
+  font-size: 0.67rem;
+}
+
+.directions-button {
+  min-height: 38px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: var(--pink-deep);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.directions-button:hover {
+  transform: translateY(-1px);
+  background: #9f2e5b;
+}
+
+.directions-button:focus-visible {
+  outline: 3px solid rgba(189, 53, 107, 0.25);
+  outline-offset: 2px;
 }
 
 h1 {
@@ -433,6 +556,10 @@ h1 em {
   color: var(--pink);
 }
 
+.venue-card + .date-picker {
+  margin-top: 14px;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -452,6 +579,11 @@ h1 em {
   display: none !important;
 }
 
+@keyframes heartbeat {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.07; }
+}
+
 @media (max-width: 520px) {
   .page {
     justify-content: flex-start;
@@ -467,9 +599,20 @@ h1 em {
     border-radius: 23px;
   }
 
-  .river-art {
+  .love-art {
     width: min(100%, 330px);
+    height: 138px;
     margin-top: 13px;
+  }
+
+  .venue-card {
+    gap: 9px;
+    padding: 10px;
+  }
+
+  .directions-button {
+    padding: 0 10px;
+    font-size: 0.61rem;
   }
 
   .message {

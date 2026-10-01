@@ -37,7 +37,34 @@
           <span><span aria-hidden="true">✧</span> A little stroll</span>
           <span><span aria-hidden="true">♡</span> Dessert</span>
         </div>
-        <p class="plan-note">You choose the day and what sounds fun. I’ll take care of the rest.</p>
+        <section class="date-picker" aria-labelledby="date-picker-title">
+          <p class="date-picker-title" id="date-picker-title">Pick the kind of evening you’re in the mood for</p>
+          <div class="date-options" role="group" aria-label="Choose a date-night mood">
+            <button class="date-option" type="button" data-vibe="Cozy & quiet" aria-pressed="false">
+              <span class="option-icon" aria-hidden="true">☾</span>
+              <span><strong>Cozy & quiet</strong><small>Dinner and a slow evening</small></span>
+            </button>
+            <button class="date-option" type="button" data-vibe="Foodie date" aria-pressed="false">
+              <span class="option-icon" aria-hidden="true">♡</span>
+              <span><strong>Foodie date</strong><small>Find something delicious</small></span>
+            </button>
+            <button class="date-option" type="button" data-vibe="Little adventure" aria-pressed="false">
+              <span class="option-icon" aria-hidden="true">✧</span>
+              <span><strong>Little adventure</strong><small>A stroll and a new place</small></span>
+            </button>
+          </div>
+          <p class="selection-note" id="selection-note" aria-live="polite" hidden></p>
+        </section>
+        <p class="plan-note">Or suggest your own idea—this is your evening too. ♡</p>
+
+        <div class="little-surprise">
+          <button class="note-button" id="note-button" type="button" aria-expanded="false" aria-controls="sweet-note">
+            A tiny note for you <span aria-hidden="true">✉</span>
+          </button>
+          <p class="sweet-note" id="sweet-note" hidden>
+            I love how even a simple conversation with you can make an ordinary day feel brighter. ♡
+          </p>
+        </div>
 
         <section class="reply-area" aria-label="Your reply">
           <p class="reply-prompt">What do you say?</p>

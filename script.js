@@ -3,8 +3,37 @@ const yesButton = document.getElementById("yes-button");
 const maybeButton = document.getElementById("maybe-button");
 const playfulHint = document.getElementById("playful-hint");
 const response = document.getElementById("response");
+const dateOptions = [...document.querySelectorAll(".date-option")];
+const selectionNote = document.getElementById("selection-note");
+const noteButton = document.getElementById("note-button");
+const sweetNote = document.getElementById("sweet-note");
+let selectedVibe = "";
 let dodgeCount = 0;
 let invitationAccepted = false;
+
+dateOptions.forEach((option) => {
+  option.addEventListener("click", () => {
+    const wasSelected = option.getAttribute("aria-pressed") === "true";
+    dateOptions.forEach((item) => item.setAttribute("aria-pressed", "false"));
+
+    if (wasSelected) {
+      selectedVibe = "";
+      selectionNote.hidden = true;
+      return;
+    }
+
+    selectedVibe = option.dataset.vibe ?? "";
+    option.setAttribute("aria-pressed", "true");
+    selectionNote.textContent = `Lovely choice: ${selectedVibe}. We can always change the plan. ♡`;
+    selectionNote.hidden = false;
+  });
+});
+
+noteButton.addEventListener("click", () => {
+  const isExpanded = noteButton.getAttribute("aria-expanded") === "true";
+  noteButton.setAttribute("aria-expanded", String(!isExpanded));
+  sweetNote.hidden = isExpanded;
+});
 
 yesArena.addEventListener("pointermove", (event) => {
   const isMousePlay =
@@ -44,7 +73,10 @@ yesArena.addEventListener("pointermove", (event) => {
 
 yesButton.addEventListener("click", () => {
   invitationAccepted = true;
-  response.textContent = "Yay! I’m looking forward to it. You pick the day and I’ll plan something lovely. ♡";
+  const plan = selectedVibe
+    ? ` We’ll make it a ${selectedVibe.toLowerCase()} kind of evening.`
+    : " You pick the day and I’ll plan something lovely.";
+  response.textContent = `Yay! I’m looking forward to it.${plan} ♡`;
   response.hidden = false;
   playfulHint.hidden = true;
 });

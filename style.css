@@ -168,6 +168,122 @@ h1 em {
   font-size: 0.74rem;
 }
 
+.date-picker {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff9fb;
+  text-align: left;
+}
+
+.date-picker-title {
+  margin: 0 0 10px;
+  color: #76596c;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.date-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.date-option {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  padding: 9px 8px;
+  border: 1px solid #f1dce5;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.date-option:hover {
+  border-color: #e8abc1;
+  background: #fff5f9;
+}
+
+.date-option[aria-pressed="true"] {
+  border-color: var(--pink);
+  background: #fff0f6;
+  box-shadow: 0 0 0 2px rgba(219, 78, 130, 0.1);
+}
+
+.date-option:focus-visible,
+.note-button:focus-visible {
+  outline: 3px solid rgba(189, 53, 107, 0.25);
+  outline-offset: 2px;
+}
+
+.option-icon {
+  color: var(--pink);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.date-option strong,
+.date-option small {
+  display: block;
+}
+
+.date-option strong {
+  font-size: 0.64rem;
+  line-height: 1.35;
+}
+
+.date-option small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.57rem;
+  line-height: 1.35;
+}
+
+.selection-note {
+  margin: 9px 0 0;
+  color: var(--pink-deep);
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.little-surprise {
+  margin-top: 13px;
+}
+
+.note-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--pink-deep);
+  cursor: pointer;
+  font-size: 0.73rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(189, 53, 107, 0.3);
+  text-underline-offset: 3px;
+}
+
+.note-button span {
+  margin-left: 3px;
+}
+
+.sweet-note {
+  margin: 9px auto 0;
+  padding: 10px 13px;
+  border-radius: 12px;
+  background: #fff2f7;
+  color: #79586d;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .reply-area {
   margin-top: 24px;
 }
@@ -330,6 +446,28 @@ h1 em {
 
   .message {
     font-size: 0.87rem;
+  }
+
+  .date-picker {
+    padding: 12px;
+  }
+
+  .date-options {
+    grid-template-columns: 1fr;
+  }
+
+  .date-option {
+    align-items: center;
+    padding: 9px 11px;
+  }
+
+  .date-option strong {
+    font-size: 0.68rem;
+  }
+
+  .date-option small {
+    margin-top: 2px;
+    font-size: 0.6rem;
   }
 
   .yes-arena {
